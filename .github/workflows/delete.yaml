@@ -30,19 +30,6 @@ jobs:
       
       # Checks-out your repository under $GITHUB_WORKSPACE.
       - uses: actions/checkout@v3
-
-      #
-      # Builds the Docker image.
-      #
-      - name: Build
-        run: ./scripts/build-image.sh
-
-      #
-      # Publishes the Docker image to the container registry.
-      #
-      - name: Publish
-        run: ./scripts/push-image.sh
-
       #
       # Installs Kubectl and connects it to the cluster.
       #
